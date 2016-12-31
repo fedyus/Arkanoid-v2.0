@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
-using System.IO;
 
 namespace Arkanoid_v2._0
 {
@@ -47,6 +41,8 @@ namespace Arkanoid_v2._0
         private Label block19 = new Label();   
         private Label block20 = new Label();
 
+        List<Label> array_2 = new List<Label>();
+
         public FormGame(int x, int y,int l,int s_1,int s_2, bool con)
         {
             InitializeComponent();
@@ -69,6 +65,17 @@ namespace Arkanoid_v2._0
             ball_sx = s_1;
             ball_sy = s_2;
             lvl = l + 1;
+            label_lvl.Text = lvl.ToString();
+            if (lvl > 1)
+            {
+                label_wall_1.Visible = true;
+                label_wall_2.Visible = true;
+                if (lvl > 2)
+                {
+                    label_wall_3.Visible = true;
+                    label_wall_4.Visible = true;
+                }
+            }
             cont = con;
             Cursor.Hide();
             this.TopMost = true;
@@ -100,6 +107,11 @@ namespace Arkanoid_v2._0
             array.Add(block18);
             array.Add(block19);
             array.Add(block20);
+
+            array_2.Add(label_wall_1);
+            array_2.Add(label_wall_2);
+            array_2.Add(label_wall_3);
+            array_2.Add(label_wall_4);
 
             Random r = new Random();
             foreach (Label tBlock in array)
@@ -172,6 +184,57 @@ namespace Arkanoid_v2._0
                     lose_ball();
                 }
             }
+
+            foreach (Label label_wall in array_2)
+            {
+                if (label_wall.Visible == true)
+                {
+                    int bx1, bx0, bx2,
+                   by1, by0, by2;
+                    int rx1, rx2,
+                        ry1, ry2;
+
+                    bx1 = ball_x;
+                    bx2 = ball_x + ball.Width;
+                    bx0 = (bx1 + bx2) / 2;
+                    by1 = ball_y;
+                    by2 = ball_y + ball.Height;
+                    by0 = (by1 + by2) / 2;
+                    rx1 = label_wall.Location.X;
+                    rx2 = rx1 + label_wall.Width;
+                    ry1 = label_wall.Location.Y;
+                    ry2 = ry1 + label_wall.Height;
+
+                    if (rx1 <= bx0 && bx0 <= rx2 &&
+                        ry1 <= by2 && by2 <= ry2)
+                    {
+                        ball_sy = -ball_sy;
+                        sp.Play();
+                        point += 1;
+                        label_point.Text = point.ToString();
+                        return;
+                    }
+                    if (rx1 <= bx2 && bx2 <= rx2 &&
+                        ry1 <= by0 && by0 <= ry2)
+                    {
+                        ball_sy = -ball_sy;
+                        sp.Play();
+                        point += 1;
+                        label_point.Text = point.ToString();
+                        return;
+                    }
+                    if (rx1 <= bx1 && bx1 <= rx2 &&
+                        ry1 <= by0 && by0 <= ry2)
+                    {
+                        ball_sx = -ball_sx;
+                        sp.Play();
+                        point += 1;
+                        label_point.Text = point.ToString();
+                        return;
+                    }
+                }
+            }
+
         }
 
         private void move_ball()
@@ -232,7 +295,7 @@ namespace Arkanoid_v2._0
                     label_point.Text = point.ToString();
                 }
                 else lose_ball();
-            }
+            }          
 
             ball_x += ball_sx;
             ball_y += ball_sy;
@@ -316,11 +379,11 @@ namespace Arkanoid_v2._0
             }
             else
             {
+                Cursor.Show();
                 timer.Enabled = false;
                 label_gameover.Visible = true;
                 button_cx.Visible = true;
-                button_exit.Visible = true;
-                Cursor.Show();
+                button_exit.Visible = true;    
                 sp_2.Play();
             }
         }

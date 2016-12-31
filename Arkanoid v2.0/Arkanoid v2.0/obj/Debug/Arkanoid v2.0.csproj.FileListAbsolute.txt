@@ -11,9 +11,6 @@ C:\Users\admin\Desktop\Arkanoid\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid v
 C:\Users\admin\Desktop\Arkanoid\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid_v2._0.FormControl.resources
 C:\Users\admin\Desktop\Arkanoid\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid_v2._0.Form_cx.resources
 C:\Users\admin\Desktop\Arkanoid\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid_v2._0.FormRecords.resources
-D:\Arkanoid\Arkanoid v2.0\Arkanoid v2.0\bin\Debug\Arkanoid v2.0.exe.config
-D:\Arkanoid\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid v2.0.exe
-D:\Arkanoid\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid v2.0.pdb
-C:\Users\admin\Source\Repos\NewRepo\Arkanoid v2.0\Arkanoid v2.0\bin\Debug\Arkanoid v2.0.exe.config
-C:\Users\admin\Source\Repos\NewRepo\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid v2.0.exe
-C:\Users\admin\Source\Repos\NewRepo\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid v2.0.pdb
+C:\Users\admin\Source\Repos\Arkanoid v2.0\Arkanoid v2.0\Arkanoid v2.0\bin\Debug\Arkanoid v2.0.exe.config
+C:\Users\admin\Source\Repos\Arkanoid v2.0\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid v2.0.exe
+C:\Users\admin\Source\Repos\Arkanoid v2.0\Arkanoid v2.0\Arkanoid v2.0\obj\Debug\Arkanoid v2.0.pdb

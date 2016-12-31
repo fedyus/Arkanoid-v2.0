@@ -46,6 +46,12 @@
             this.life_3 = new System.Windows.Forms.Label();
             this.button_exit = new System.Windows.Forms.Label();
             this.button_cx = new System.Windows.Forms.Label();
+            this.label_wall_1 = new System.Windows.Forms.Label();
+            this.label_wall_2 = new System.Windows.Forms.Label();
+            this.label_wall_3 = new System.Windows.Forms.Label();
+            this.label_wall_4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_lvl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_top
@@ -198,12 +204,80 @@
             this.button_cx.Text = "Сохранить результат";
             this.button_cx.Click += new System.EventHandler(this.button_cx_Click);
             // 
+            // label_wall_1
+            // 
+            this.label_wall_1.BackColor = System.Drawing.Color.White;
+            this.label_wall_1.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_wall_1.Location = new System.Drawing.Point(920, 360);
+            this.label_wall_1.Name = "label_wall_1";
+            this.label_wall_1.Size = new System.Drawing.Size(200, 20);
+            this.label_wall_1.TabIndex = 17;
+            this.label_wall_1.Visible = false;
+            // 
+            // label_wall_2
+            // 
+            this.label_wall_2.BackColor = System.Drawing.Color.White;
+            this.label_wall_2.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_wall_2.Location = new System.Drawing.Point(126, 360);
+            this.label_wall_2.Name = "label_wall_2";
+            this.label_wall_2.Size = new System.Drawing.Size(200, 20);
+            this.label_wall_2.TabIndex = 18;
+            this.label_wall_2.Visible = false;
+            // 
+            // label_wall_3
+            // 
+            this.label_wall_3.BackColor = System.Drawing.Color.White;
+            this.label_wall_3.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_wall_3.Location = new System.Drawing.Point(336, 219);
+            this.label_wall_3.Name = "label_wall_3";
+            this.label_wall_3.Size = new System.Drawing.Size(200, 20);
+            this.label_wall_3.TabIndex = 19;
+            this.label_wall_3.Visible = false;
+            // 
+            // label_wall_4
+            // 
+            this.label_wall_4.BackColor = System.Drawing.Color.White;
+            this.label_wall_4.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_wall_4.Location = new System.Drawing.Point(727, 219);
+            this.label_wall_4.Name = "label_wall_4";
+            this.label_wall_4.Size = new System.Drawing.Size(200, 20);
+            this.label_wall_4.TabIndex = 20;
+            this.label_wall_4.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(223, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 23);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Level : ";
+            // 
+            // label_lvl
+            // 
+            this.label_lvl.AutoSize = true;
+            this.label_lvl.BackColor = System.Drawing.Color.White;
+            this.label_lvl.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_lvl.Location = new System.Drawing.Point(308, 9);
+            this.label_lvl.Name = "label_lvl";
+            this.label_lvl.Size = new System.Drawing.Size(22, 23);
+            this.label_lvl.TabIndex = 22;
+            this.label_lvl.Text = "0";
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.label_lvl);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_wall_4);
+            this.Controls.Add(this.label_wall_3);
+            this.Controls.Add(this.label_wall_2);
+            this.Controls.Add(this.label_wall_1);
             this.Controls.Add(this.button_cx);
             this.Controls.Add(this.button_exit);
             this.Controls.Add(this.label_up);
@@ -248,5 +322,11 @@
         private System.Windows.Forms.Label label_up;
         private System.Windows.Forms.Label button_exit;
         private System.Windows.Forms.Label button_cx;
+        private System.Windows.Forms.Label label_wall_1;
+        private System.Windows.Forms.Label label_wall_2;
+        private System.Windows.Forms.Label label_wall_3;
+        private System.Windows.Forms.Label label_wall_4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_lvl;
     }
 }

@@ -30,6 +30,7 @@
         {
             this.button_exit = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
+            this.button_delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_exit
@@ -52,12 +53,24 @@
             this.label.Size = new System.Drawing.Size(475, 391);
             this.label.TabIndex = 23;
             // 
+            // button_delete
+            // 
+            this.button_delete.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_delete.Location = new System.Drawing.Point(37, 403);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(90, 30);
+            this.button_delete.TabIndex = 24;
+            this.button_delete.Text = "Delete";
+            this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
             // FormRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(499, 445);
+            this.Controls.Add(this.button_delete);
             this.Controls.Add(this.label);
             this.Controls.Add(this.button_exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -70,5 +83,6 @@
         #endregion
         private System.Windows.Forms.Button button_exit;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Button button_delete;
     }
 }
